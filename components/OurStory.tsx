@@ -1,4 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
+import Photo from "./Photo";
 import { siteConfig } from "@/lib/siteConfig";
 
 export default function OurStory() {
@@ -20,17 +21,11 @@ export default function OurStory() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1} className="order-1 lg:order-2">
-            <div
-              className="flex aspect-[4/5] items-center justify-center overflow-hidden rounded-sm border border-forest/10"
-              style={{
-                backgroundImage:
-                  "linear-gradient(155deg, #E8B8B4 0%, #F7F1E1 55%, #6E1423 140%)",
-              }}
-            >
-              <span className="font-display rounded-sm bg-ivory/80 px-6 py-2.5 text-lg italic text-wine-deep">
-                Our story
-              </span>
-            </div>
+            <Photo
+              src={siteConfig.photos.story}
+              alt="Precious and Feranmi"
+              className="aspect-[4/5] rounded-sm border border-forest/10"
+            />
           </ScrollReveal>
         </div>
       </div>

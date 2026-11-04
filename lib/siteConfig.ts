@@ -61,13 +61,25 @@ export const siteConfig = {
   loveQuote:
     "Two hearts have found their home in each other; two souls have chosen to walk together, and two lives are about to become one beautiful story.",
 
+  // ─────────────────────────────────────────────────────────────
+  // PHOTOS: put your image files in the  public/images  folder.
+  // Each path below must match the file name EXACTLY (including
+  // capital letters and .jpg / .png / .jpeg).
+  // ─────────────────────────────────────────────────────────────
+  photos: {
+    her: "/images/precious.jpg", // hero (top right) + small circle by the love quote
+    him: "/images/feranmi.jpg", // hero (bottom right) + small circle by the love quote
+    story: "/images/our-story.jpg", // photo beside "How we met"
+  },
+
+  // Gallery: one line per photo. Add or remove lines freely.
   gallery: [
-    { label: "Engagement, 01", gradient: "from-[#8A9C7B] to-[#5F7050]" },
-    { label: "Engagement, 02", gradient: "from-[#C79A9B] to-[#7A2E3D]" },
-    { label: "Engagement, 03", gradient: "from-[#D8C79A] to-[#B78A3A]" },
-    { label: "Engagement, 04", gradient: "from-[#7A2E3D] to-[#3E1620]" },
-    { label: "Engagement, 05", gradient: "from-[#AEB89C] to-[#647456]" },
-    { label: "Engagement, 06", gradient: "from-[#E8B8B4] to-[#B06B66]" },
+    { src: "/images/gallery-1.jpg", alt: "Engagement photo 1" },
+    { src: "/images/gallery-2.jpg", alt: "Engagement photo 2" },
+    { src: "/images/gallery-3.jpg", alt: "Engagement photo 3" },
+    { src: "/images/gallery-4.jpg", alt: "Engagement photo 4" },
+    { src: "/images/gallery-5.jpg", alt: "Engagement photo 5" },
+    { src: "/images/gallery-6.jpg", alt: "Engagement photo 6" },
   ],
 
   // WhatsApp numbers in international format (no leading 0, with

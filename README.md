@@ -69,28 +69,22 @@ lib/
 
 ## Adding your real photos
 
-Every photo on the site — the two individual portraits in the hero, the
-"Our Story" photo, the gallery tiles, and the two small circular photos
-either side of the closing love quote — currently uses a soft colour
-placeholder, so the site works immediately with zero missing images.
-To use real photos:
+Put your pictures in the **`public/images/`** folder using these exact
+file names (lowercase, `.jpg`):
 
-1. Put your image files in the `public/` folder, e.g. `public/precious.jpg`,
-   `public/feranmi.jpg`, `public/us.jpg`.
-2. Find the placeholder `<div>` you want to replace (its `style` prop has
-   a `backgroundImage: "linear-gradient(...)"` — that's the tell) in
-   `components/Hero.tsx` (the two portraits), `components/OurStory.tsx`
-   (the story photo), `components/Gallery.tsx` (the six gallery tiles), or
-   `components/LoveQuote.tsx` (the two small circles), and replace the
-   gradient with your photo:
-   ```tsx
-   style={{ backgroundImage: "url('/precious.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
-   ```
-3. You can remove the name/label `<span>` inside each frame once a real
-   photo is in place, if you'd rather the photo speak for itself.
+| File | Where it appears |
+|---|---|
+| `precious.jpg` | Hero (top right) + small circle beside the love quote |
+| `feranmi.jpg` | Hero (bottom right) + small circle beside the love quote |
+| `our-story.jpg` | Photo beside "How we met" |
+| `gallery-1.jpg` to `gallery-6.jpg` | The gallery |
 
-(You can also switch to `next/image` for automatic optimisation once real
-photos are in place — happy to wire that up if you'd like.)
+That's it, no code changes needed. Until a file exists, a soft colour
+placeholder shows. Want a `.png` or different file names? Edit the paths
+in `lib/siteConfig.ts` (the `photos` and `gallery` sections). To add more
+gallery photos, copy one line in `gallery`.
+
+Tip: keep each photo under about 500 KB so the site loads quickly.
 
 ## How the forms work
 

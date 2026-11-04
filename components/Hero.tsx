@@ -2,6 +2,7 @@
 
 import { motion, type Variants } from "framer-motion";
 import Countdown from "./Countdown";
+import Photo from "./Photo";
 import { siteConfig } from "@/lib/siteConfig";
 
 const rise: Variants = {
@@ -106,26 +107,16 @@ export default function Hero() {
             variants={rise}
             className="mx-auto flex w-full max-w-[280px] flex-col gap-4 sm:max-w-xs lg:mx-0 lg:max-w-none"
           >
-            <div
-              className="flex aspect-[4/5] items-center justify-center rounded-sm border border-forest/10"
-              style={{
-                backgroundImage: "linear-gradient(155deg, #E8B8B4 0%, #D8C3A0 100%)",
-              }}
-            >
-              <span className="font-display rounded-sm bg-ivory/80 px-5 py-2 text-lg italic text-wine-deep">
-                {siteConfig.partnerOne}
-              </span>
-            </div>
-            <div
-              className="flex aspect-[4/5] items-center justify-center rounded-sm border border-forest/10"
-              style={{
-                backgroundImage: "linear-gradient(155deg, #7C8F6E 0%, #2E3A28 100%)",
-              }}
-            >
-              <span className="font-display rounded-sm bg-ivory/80 px-5 py-2 text-lg italic text-wine-deep">
-                {siteConfig.partnerTwo}
-              </span>
-            </div>
+            <Photo
+              src={siteConfig.photos.her}
+              alt={siteConfig.partnerOne}
+              className="aspect-[4/5] rounded-sm border border-forest/10"
+            />
+            <Photo
+              src={siteConfig.photos.him}
+              alt={siteConfig.partnerTwo}
+              className="aspect-[4/5] rounded-sm border border-forest/10"
+            />
           </motion.div>
         </div>
       </div>

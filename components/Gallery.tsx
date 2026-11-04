@@ -1,4 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
+import Photo from "./Photo";
 import { siteConfig } from "@/lib/siteConfig";
 
 export default function Gallery() {
@@ -14,16 +15,15 @@ export default function Gallery() {
 
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
           {siteConfig.gallery.map((g, i) => (
-            <ScrollReveal key={g.label} delay={(i % 3) * 0.06}>
-              <div
-                className={`flex aspect-square items-center justify-center overflow-hidden rounded-sm border border-forest/10 bg-gradient-to-br ${g.gradient} transition-transform duration-300 hover:-translate-y-1`}
-              >
-                <span className="font-display italic text-ivory/90">{g.label}</span>
-              </div>
+            <ScrollReveal key={g.src} delay={(i % 3) * 0.06}>
+              <Photo
+                src={g.src}
+                alt={g.alt}
+                className="aspect-square rounded-sm border border-forest/10 transition-transform duration-300 hover:-translate-y-1"
+              />
             </ScrollReveal>
           ))}
         </div>
-  
       </div>
     </section>
   );
