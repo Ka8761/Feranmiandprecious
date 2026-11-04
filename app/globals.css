@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-ivory: #FBF9F4;
+  --color-sage-pale: #EFF2E9;
+  --color-sage: #7C8F6E;
+  --color-forest: #2E3A28;
+  --color-wine: #7A2E3D;
+  --color-wine-deep: #5E2130;
+  --color-blush: #E8B8B4;
+  --color-gold: #C9A24B;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Karla", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-forest);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-blush);
+  color: var(--color-wine-deep);
+}
+
+.font-display {
+  font-family: var(--font-serif);
+}
+
+/* Radio card highlight when checked (RSVP attendance toggle) */
+.radio-opt:has(input:checked) {
+  border-color: var(--color-wine-deep);
+  background: rgba(122,46,61,0.05);
+}
+
+/* Focus visibility */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2.5px solid var(--color-gold);
+  outline-offset: 2px;
+}
