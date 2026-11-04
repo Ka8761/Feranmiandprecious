@@ -78,8 +78,6 @@ export const siteConfig = {
     { src: "/images/gallery-2.jpg", alt: "Engagement photo 2" },
     { src: "/images/gallery-3.jpg", alt: "Engagement photo 3" },
     { src: "/images/gallery-4.jpg", alt: "Engagement photo 4" },
-    { src: "/images/gallery-5.jpg", alt: "Engagement photo 5" },
-    { src: "/images/gallery-6.jpg", alt: "Engagement photo 6" },
   ],
 
   // WhatsApp numbers in international format (no leading 0, with

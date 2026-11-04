@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion, type Variants } from "framer-motion";
@@ -99,24 +100,39 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Photo column — her photo on top, his photo below */}
+          {/* Photo column — larger trapezoid photos touching diagonally */}
           <motion.div
             custom={0.3}
             initial="hidden"
             animate="show"
             variants={rise}
-            className="mx-auto flex w-full max-w-[280px] flex-col gap-4 sm:max-w-xs lg:mx-0 lg:max-w-none"
+            className="mx-auto flex w-full max-w-[380px] flex-col gap-0 sm:max-w-[420px] lg:mx-0 lg:max-w-none"
           >
-            <Photo
-              src={siteConfig.photos.her}
-              alt={siteConfig.partnerOne}
-              className="aspect-[4/5] rounded-sm border border-forest/10"
-            />
-            <Photo
-              src={siteConfig.photos.him}
-              alt={siteConfig.partnerTwo}
-              className="aspect-[4/5] rounded-sm border border-forest/10"
-            />
+            <div
+              className="w-full overflow-hidden"
+              style={{
+                clipPath: "polygon(0 0, 100% 0, 100% 85%, 0 100%)",
+              }}
+            >
+              <Photo
+                src={siteConfig.photos.her}
+                alt={siteConfig.partnerOne}
+                className="aspect-[5/4] w-full rounded-sm border border-forest/10"
+              />
+            </div>
+
+            <div
+              className="w-full overflow-hidden"
+              style={{
+                clipPath: "polygon(0 15%, 100% 0, 100% 100%, 0 100%)",
+              }}
+            >
+              <Photo
+                src={siteConfig.photos.him}
+                alt={siteConfig.partnerTwo}
+                className="aspect-[5/4] w-full rounded-sm border border-forest/10"
+              />
+            </div>
           </motion.div>
         </div>
       </div>
